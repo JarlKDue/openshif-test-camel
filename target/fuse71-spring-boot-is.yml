@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: List
+items:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    name: fuse71-spring-boot
+  spec:
+    tags:
+    - from:
+        kind: ImageStreamImage
+        name: fuse71-spring-boot@sha256:7e8be72db9a6e12586e9f145e3c3e93eceafc27fbae432855432d98dd4eb9fb9
+        namespace: myproject
+      name: latest
